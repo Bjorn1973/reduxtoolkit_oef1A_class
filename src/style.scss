@@ -1,0 +1,121 @@
+body {
+  font-size: 62.5%;
+  height: 100vh;
+  .container {
+    width: 98%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: lightgray;
+    form {
+      margin-left: 5px;
+      .control {
+        width: 30%;
+        margin-top: 10px;
+      }
+    }
+    ul {
+      margin-top: 10px;
+      margin-left: 5px;
+      .list-wrapper {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        font-size: 1.5rem;
+        .btn-wrapper {
+          vertical-align: top;
+          .inc,
+          .dec {
+            background-color: lightgreen;
+            border-radius: 9999px;
+            cursor: pointer;
+            pointer-events: auto;
+            display: inline-block;
+            border: none;
+            height: 20px;
+            max-height: 20px;
+            max-width: 20px;
+            min-height: 20px;
+            min-width: 20px;
+            outline: none;
+            position: relative;
+            vertical-align: top;
+            width: 20px;
+            text-align: center;
+            align-items: flex-start;
+          }
+          .inc::before,
+          .inc::after,
+          .dec::before {
+            background-color: white;
+            content: "";
+            height: 2px;
+            width: 50%;
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(90deg);
+            transform-origin: center center;
+          }
+          .inc::after {
+            height: 50%;
+            width: 2px;
+          }
+          .dec::before {
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+          }
+          .delete {
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container form .control {
+    width: 50%;
+  }
+  ul .list-wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container form .control {
+    width: 70%;
+  }
+  body .container ul .list-wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body .container form .control {
+    width: 80%;
+  }
+  body .container ul .list-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body .container form .control {
+    width: 85%;
+  }
+  body .container ul .list-wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body .container form .control {
+    width: 95%;
+  }
+  body .container ul .list-wrapper {
+    width: 95%;
+  }
+}
