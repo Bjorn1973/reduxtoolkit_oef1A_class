@@ -1,7 +1,4 @@
 {
-  "name": "winkelwagenclass",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve ./index.html --open",
     "build": "npm run clean && parcel build ./src/index.html --dist-dir ./out --no-source-maps",
